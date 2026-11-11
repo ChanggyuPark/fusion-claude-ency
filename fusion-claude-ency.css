@@ -1,0 +1,335 @@
+/* Sixshop /fusion-claude-ency · v08 · v07 design scoped to independent root. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pretendard:wght@400;500;600;700;800&display=swap');
+#ency-fusion-claude-app{--ink:#101214;--paper:#f3f4f3;--white:#fff;--dim:#abb2b2;--lime:#00c4b4;--ency-blue:#3b79e4;--ency-gradient:linear-gradient(108deg,#00c4b4 0%,#087c9e 52%,#356de0 100%);--deep:#191d20;--content:min(1360px,calc(100% - 96px));--font: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif}
+#ency-fusion-claude-app *{box-sizing:border-box}
+#ency-fusion-claude-app{scroll-behavior:smooth}
+#ency-fusion-claude-app{margin:0;font:400 17px/1.6 var(--font);background:var(--paper);color:var(--ink);word-break:keep-all}
+#ency-fusion-claude-app img{display:block;max-width:100%}
+#ency-fusion-claude-app button, #ency-fusion-claude-app a{font:inherit}
+#ency-fusion-claude-app a{text-decoration:none;color:inherit}
+#ency-fusion-claude-app button{cursor:pointer}
+#ency-fusion-claude-app .wrap{width:var(--content);margin:auto}
+#ency-fusion-claude-app .dark{background:var(--ink);color:#fff}
+#ency-fusion-claude-app .eyebrow{display:none}
+#ency-fusion-claude-app .brand{font:700 20px/1 "Montserrat",sans-serif;letter-spacing:-.045em}
+#ency-fusion-claude-app .topline{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:34px}
+#ency-fusion-claude-app .topline .aside{font-size:13px;color:#bfc6c5}
+#ency-fusion-claude-app .hero{min-height:860px;position:relative;overflow:hidden;padding-bottom:115px}
+#ency-fusion-claude-app .hero-copy{max-width:840px;padding-top:100px;position:relative;z-index:2}
+#ency-fusion-claude-app .hero h1{margin:0;font-size:clamp(54px,7.3vw,112px);line-height:1.06;letter-spacing:-.075em;font-weight:700}
+#ency-fusion-claude-app .hero h1 span{display:block}
+#ency-fusion-claude-app .hero .lead{margin:36px 0 0;max-width:570px;color:#c4c9c8;font-size:clamp(16px,1.6vw,21px);line-height:1.7}
+#ency-fusion-claude-app .hero-actions{display:flex;align-items:center;gap:28px;margin-top:36px}
+#ency-fusion-claude-app .btn{display:inline-flex;justify-content:center;align-items:center;min-height:52px;padding:12px 24px;border:0;border-radius:2px;font-weight:700;transition:transform .2s,background .2s}
+#ency-fusion-claude-app .btn:hover{transform:translateY(-2px)}
+#ency-fusion-claude-app .btn-primary{background:var(--ency-gradient);color:#fff}
+#ency-fusion-claude-app .btn-primary:hover{filter:brightness(1.12)}
+#ency-fusion-claude-app .textlink{border:0;background:none;color:inherit;font-weight:600;padding:12px 0;border-bottom:2px solid currentColor}
+#ency-fusion-claude-app .hero-stage{position:relative;margin:78px auto 0;width:min(1020px,100%)}
+#ency-fusion-claude-app .stage-screen{background:#22282b;border:10px solid #343a3d;aspect-ratio:16/8.7;overflow:hidden;position:relative}
+#ency-fusion-claude-app .stage-screen .screen-image{width:100%;height:100%;object-fit:cover}
+#ency-fusion-claude-app .stage-screen .missing{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#1d2628;color:#d6dfdb;gap:10px}
+#ency-fusion-claude-app .missing small{color:#9aa7a5;font-size:13px}
+#ency-fusion-claude-app .stage-float{position:absolute;bottom:-42px;right:-30px;width:290px;padding:26px;background:var(--ency-gradient);color:#fff}
+#ency-fusion-claude-app .stage-float strong{display:block;font-size:29px;line-height:1.25;letter-spacing:-.04em}
+#ency-fusion-claude-app .stage-float p{margin:8px 0 0;font-size:13px}
+#ency-fusion-claude-app .stage-note{position:absolute;top:-21px;right:0;font-size:12px;color:#ccd5d0}
+#ency-fusion-claude-app .panel-caption{font-size:13px;color:#6e7776;margin-top:15px}
+#ency-fusion-claude-app .section{padding:148px 0}
+#ency-fusion-claude-app .section-heading{font-weight:700;letter-spacing:-.045em;line-height:1.15;font-size:clamp(37px,5vw,69px);margin:0;max-width:950px}
+#ency-fusion-claude-app .section-intro{max-width:620px;margin:28px 0 0;font-size:18px;line-height:1.75;color:#515b5a}
+#ency-fusion-claude-app .workflow{background:var(--paper)}
+#ency-fusion-claude-app .workflow-item{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center;margin-top:110px}
+#ency-fusion-claude-app .workflow-item.reverse{grid-template-columns:1.18fr .82fr}
+#ency-fusion-claude-app .workflow-item.reverse .wf-copy{order:2}
+#ency-fusion-claude-app .workflow-item.reverse .wf-visual{order:1}
+#ency-fusion-claude-app .wf-copy h3{font-size:clamp(30px,3.2vw,50px);letter-spacing:-.055em;line-height:1.2;margin:0 0 25px}
+#ency-fusion-claude-app .wf-copy p{font-size:17px;color:#4e5958;max-width:440px;line-height:1.8}
+#ency-fusion-claude-app .wf-visual{min-height:380px;background:#22272a;position:relative;display:grid;place-items:center;overflow:hidden}
+#ency-fusion-claude-app .wf-visual img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+#ency-fusion-claude-app .wf-visual .wf-fallback{color:#f0f3f3;text-align:center;padding:38px}
+#ency-fusion-claude-app .wf-visual .wf-fallback b{display:block;font-size:clamp(30px,5vw,64px);line-height:1.15;letter-spacing:-.06em}
+#ency-fusion-claude-app .wf-visual .wf-fallback small{display:block;margin-top:14px;color:#b5bfbe}
+#ency-fusion-claude-app .wf-visual:after{content:attr(data-label);position:absolute;bottom:16px;left:20px;background:#0d1112c9;color:white;padding:5px 10px;font-size:12px}
+#ency-fusion-claude-app .tech-note{margin-top:80px;padding:25px 30px;background:#e5e8e5;color:#4c5953;font-size:15px}
+#ency-fusion-claude-app .demo{background:#e5e8e5}
+#ency-fusion-claude-app .demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:64px}
+#ency-fusion-claude-app .video-card{background:#171c1e;color:white}
+#ency-fusion-claude-app .video-space{aspect-ratio:16/9;display:grid;place-items:center;position:relative;background:#222d2c}
+#ency-fusion-claude-app .video-space iframe{width:100%;height:100%;border:0;position:absolute;inset:0}
+#ency-fusion-claude-app .video-space .video-empty{padding:35px;text-align:center;color:#aab4b3}
+#ency-fusion-claude-app .video-empty b{display:block;font-size:20px;color:#f3f6f5}
+#ency-fusion-claude-app .video-info{padding:26px}
+#ency-fusion-claude-app .video-info h3{margin:0;font-size:24px;letter-spacing:-.03em}
+#ency-fusion-claude-app .video-info p{margin:10px 0 0;color:#b9c1bf;font-size:15px}
+#ency-fusion-claude-app .benefit{background:#111516;color:white}
+#ency-fusion-claude-app .benefit .section-intro{color:#b7c0bf}
+#ency-fusion-claude-app .benefit-spotlight{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center;margin-top:62px}
+#ency-fusion-claude-app .benefit-spotlight .large-visual{aspect-ratio:1.38;background:#212a2a;position:relative;display:grid;place-items:center;overflow:hidden}
+#ency-fusion-claude-app .large-visual img{height:100%;width:100%;object-fit:cover;position:absolute}
+#ency-fusion-claude-app .large-visual .missing{width:100%;height:100%;display:grid;place-items:center;color:#cdd6d3;text-align:center;padding:30px}
+#ency-fusion-claude-app .benefit-list{list-style:none;margin:0;padding:0}
+#ency-fusion-claude-app .benefit-list li{margin:0 0 38px}
+#ency-fusion-claude-app .benefit-list b{display:block;font-size:24px;letter-spacing:-.03em}
+#ency-fusion-claude-app .benefit-list p{margin:8px 0 0;color:#b8c0c0;font-size:16px}
+#ency-fusion-claude-app .guide{background:#eceeeb}
+#ency-fusion-claude-app .guide-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px;align-items:center}
+#ency-fusion-claude-app .guide-cover{width:min(390px,100%);aspect-ratio:3/4.1;background:#1a2022;color:#fff;padding:36px;display:flex;flex-direction:column;justify-content:space-between}
+#ency-fusion-claude-app .guide-cover .mini{font-weight:700;font-size:16px}
+#ency-fusion-claude-app .guide-cover h3{font-size:clamp(28px,3vw,42px);line-height:1.2;letter-spacing:-.055em;margin:0}
+#ency-fusion-claude-app .guide-cover p{font-size:15px;color:#c5d0ca}
+#ency-fusion-claude-app .guide-copy .section-heading{font-size:clamp(35px,4.5vw,60px)}
+#ency-fusion-claude-app .guide-copy p{max-width:590px;color:#576261;font-size:18px;line-height:1.75;margin:22px 0 30px}
+#ency-fusion-claude-app .guide-points{list-style:none;padding:0;margin:0 0 32px}
+#ency-fusion-claude-app .guide-points li{margin:10px 0;font-size:16px}
+#ency-fusion-claude-app .guide-points li:before{content:"•";margin-right:12px}
+#ency-fusion-claude-app .guide .btn-primary{background:var(--ency-gradient);color:white}
+#ency-fusion-claude-app .guide .btn-primary:hover{filter:brightness(1.12)}
+#ency-fusion-claude-app .consult{background:var(--ency-gradient);color:#fff;padding:140px 0 155px}
+#ency-fusion-claude-app .consult .section-heading{font-size:clamp(45px,6.6vw,90px)}
+#ency-fusion-claude-app .consult p{max-width:650px;margin:28px 0 35px;font-size:20px}
+#ency-fusion-claude-app .consult .btn{background:#fff;color:#101214}
+#ency-fusion-claude-app .fineprint{display:block;margin-top:22px;font-size:13px;color:#ecf6f8}
+#ency-fusion-claude-app .reveal{opacity:1;transform:none}
+@media(prefers-reduced-motion:no-preference){#ency-fusion-claude-app .js .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+#ency-fusion-claude-app .js .reveal.is-visible{opacity:1;transform:none}}
+#ency-fusion-claude-app :focus-visible{outline:3px solid #00c4b4;outline-offset:4px}
+@media(max-width:900px){#ency-fusion-claude-app{--content:calc(100% - 48px)}
+#ency-fusion-claude-app .hero{min-height:auto;padding-bottom:120px}
+#ency-fusion-claude-app .hero-copy{padding-top:90px}
+#ency-fusion-claude-app .hero h1{font-size:clamp(52px,10vw,78px)}
+#ency-fusion-claude-app .workflow-item, #ency-fusion-claude-app .workflow-item.reverse, #ency-fusion-claude-app .benefit-spotlight, #ency-fusion-claude-app .guide-layout{grid-template-columns:1fr;gap:30px}
+#ency-fusion-claude-app .workflow-item.reverse .wf-copy, #ency-fusion-claude-app .workflow-item.reverse .wf-visual{order:initial}
+#ency-fusion-claude-app .workflow-item{margin-top:80px}
+#ency-fusion-claude-app .workflow-item.reverse .wf-visual{order:2}
+#ency-fusion-claude-app .wf-visual{min-height:360px}
+#ency-fusion-claude-app .demo-grid{grid-template-columns:1fr}
+#ency-fusion-claude-app .benefit-spotlight .large-visual{aspect-ratio:16/10}
+#ency-fusion-claude-app .guide-cover{width:min(370px,100%)}}
+@media(max-width:580px){#ency-fusion-claude-app{--content:calc(100% - 36px)}
+#ency-fusion-claude-app{font-size:16px}
+#ency-fusion-claude-app .topline{padding-top:26px}
+#ency-fusion-claude-app .topline .aside{font-size:11px}
+#ency-fusion-claude-app .hero-copy{padding-top:80px}
+#ency-fusion-claude-app .hero h1{font-size:clamp(43px,11.4vw,61px)}
+#ency-fusion-claude-app .hero .lead{margin-top:25px;font-size:16px}
+#ency-fusion-claude-app .hero-actions{align-items:stretch;flex-direction:column;gap:10px}
+#ency-fusion-claude-app .hero-actions .textlink{text-align:center}
+#ency-fusion-claude-app .hero-stage{margin-top:55px}
+#ency-fusion-claude-app .stage-screen{border-width:5px;aspect-ratio:16/10}
+#ency-fusion-claude-app .stage-float{right:-7px;bottom:-64px;width:215px;padding:16px}
+#ency-fusion-claude-app .stage-float strong{font-size:21px}
+#ency-fusion-claude-app .stage-float p{font-size:11px}
+#ency-fusion-claude-app .section{padding:100px 0}
+#ency-fusion-claude-app .section-heading{font-size:clamp(35px,9vw,47px)}
+#ency-fusion-claude-app .section-intro{font-size:16px}
+#ency-fusion-claude-app .workflow-item{margin-top:65px}
+#ency-fusion-claude-app .wf-visual{min-height:240px}
+#ency-fusion-claude-app .wf-copy h3{font-size:34px}
+#ency-fusion-claude-app .wf-copy p{font-size:16px}
+#ency-fusion-claude-app .video-info h3{font-size:21px}
+#ency-fusion-claude-app .guide-layout{gap:44px}
+#ency-fusion-claude-app .consult{padding:100px 0 105px}
+#ency-fusion-claude-app .consult .section-heading{font-size:43px}
+#ency-fusion-claude-app .consult p{font-size:17px}}
+/* 실제 브랜드명과 로고를 하나의 연속된 작업 흐름으로 제시 */
+#ency-fusion-claude-app .brand-line{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:34px;margin-bottom:6px}
+#ency-fusion-claude-app .brand-unit{display:inline-flex;align-items:center;justify-content:center;min-height:47px;gap:10px;color:#edf4f6}
+#ency-fusion-claude-app .brand-unit img{display:block;width:auto;height:26px;max-width:34px;object-fit:contain}
+#ency-fusion-claude-app .brand-unit .wordmark{font:700 22px/1 Montserrat,Arial,sans-serif;letter-spacing:-.045em}
+#ency-fusion-claude-app .brand-unit .wordmark.claude{font-size:22px;font-weight:600;letter-spacing:-.045em}
+#ency-fusion-claude-app .brand-separator{font-size:20px;color:#8cacae;font-weight:400}
+#ency-fusion-claude-app .brand-unit .brand-descriptor{font-size:12px;color:#a6b6bd;margin-left:3px;font-weight:500}
+#ency-fusion-claude-app .workflow-divider{height:2px;width:100%;background:linear-gradient(90deg,#00c4b4,#3678dc 65%,transparent);margin:52px 0 0;opacity:.85}
+#ency-fusion-claude-app .inline-logo{display:inline-flex;align-items:center;gap:11px;flex-wrap:wrap;margin:0 0 20px;padding:11px 14px;background:#e4e9e8}
+#ency-fusion-claude-app .inline-logo img{height:26px;max-width:32px;width:auto;object-fit:contain}
+#ency-fusion-claude-app .inline-logo b{font:700 17px/1.25 Montserrat,Arial,sans-serif;letter-spacing:-.035em}
+#ency-fusion-claude-app .inline-logo .symbol-cross{color:#617678;font-size:17px}
+#ency-fusion-claude-app .brand-unit img[src*="simpleicons"]{filter:brightness(0) invert(1)}
+@media(max-width:580px){#ency-fusion-claude-app .brand-line{gap:9px;margin-top:24px}
+#ency-fusion-claude-app .brand-unit{gap:5px;min-height:36px}
+#ency-fusion-claude-app .brand-unit img{height:20px;max-width:24px}
+#ency-fusion-claude-app .brand-unit .wordmark{font-size:16px}
+#ency-fusion-claude-app .brand-unit .wordmark.claude{font-size:17px}
+#ency-fusion-claude-app .brand-unit .brand-descriptor{display:none}
+#ency-fusion-claude-app .brand-separator{font-size:14px}
+#ency-fusion-claude-app .workflow-divider{margin-top:35px}
+#ency-fusion-claude-app .inline-logo{gap:7px}
+#ency-fusion-claude-app .inline-logo img{height:20px}
+#ency-fusion-claude-app .inline-logo b{font-size:15px}}
+/* v03: 섬세한 배경 깊이와 구조적 라인. 실제 브랜드 로고는 원본 색상 유지. */
+#ency-fusion-claude-app .hero, #ency-fusion-claude-app .workflow, #ency-fusion-claude-app .demo, #ency-fusion-claude-app .benefit, #ency-fusion-claude-app .guide, #ency-fusion-claude-app .consult{ isolation:isolate; }
+#ency-fusion-claude-app .hero{
+  background:
+    radial-gradient(ellipse 68% 48% at 82% 21%, rgba(0,196,180,.085), transparent 78%),
+    radial-gradient(ellipse 54% 42% at 7% 91%, rgba(53,109,224,.065), transparent 82%),
+    #101214;
+}
+#ency-fusion-claude-app .hero::before, #ency-fusion-claude-app .benefit::before{
+  content:""; position:absolute; pointer-events:none; z-index:0;
+  width:54vw; height:54vw; max-width:840px; max-height:840px;
+  border:1px solid rgba(164,214,211,.075); border-radius:50%;
+  right:-25vw; top:9%; transform:rotate(-21deg) scaleY(.66);
+}
+#ency-fusion-claude-app .hero::after{
+  content:""; position:absolute; pointer-events:none; z-index:0;
+  width:37vw; height:37vw; max-width:550px; max-height:550px;
+  border:1px solid rgba(164,214,211,.055); border-radius:50%;
+  right:-13vw; top:26%; transform:rotate(-21deg) scaleY(.66);
+}
+#ency-fusion-claude-app .hero .wrap, #ency-fusion-claude-app .benefit .wrap, #ency-fusion-claude-app .workflow .wrap{position:relative; z-index:1}
+#ency-fusion-claude-app .workflow{
+  position:relative;
+  background:
+    radial-gradient(ellipse 50% 22% at 96% 35%, rgba(0,196,180,.034), transparent 92%),
+    #f3f4f3;
+}
+#ency-fusion-claude-app .workflow::before{
+  content:""; position:absolute; top:10%; right:0; width:28vw; height:44vw;
+  pointer-events:none; opacity:.43;
+  background:repeating-linear-gradient(125deg,transparent 0,transparent 88px,rgba(21,94,101,.075) 89px,transparent 90px);
+  -webkit-mask-image:linear-gradient(to left,#000,transparent);
+  mask-image:linear-gradient(to left,#000,transparent);
+}
+#ency-fusion-claude-app .demo{ background:linear-gradient(135deg,#e5e8e5 0%,#e9ece9 63%,#e2e8e7 100%) }
+#ency-fusion-claude-app .benefit{
+  position:relative;
+  background:
+    radial-gradient(ellipse 70% 35% at 94% 88%,rgba(0,196,180,.058),transparent 80%),
+    #111516;
+  overflow:hidden;
+}
+#ency-fusion-claude-app .benefit::before{ right:-32vw; top:20%; }
+#ency-fusion-claude-app .guide{
+  background:linear-gradient(150deg,#eceeeb 0%,#f0f2ef 65%,#e6ecea 100%);
+}
+#ency-fusion-claude-app .ency-mark{
+  background:#fff; padding:8px 13px; min-height:47px;
+}
+#ency-fusion-claude-app .ency-mark img{height:29px; max-width:126px; width:auto; object-fit:contain}
+#ency-fusion-claude-app .ency-inline{background:#e4e9e8; padding:11px 14px}
+#ency-fusion-claude-app .ency-inline img{height:28px; max-width:132px; width:auto}
+@media(max-width:580px){#ency-fusion-claude-app .hero::before{width:95vw;height:95vw;right:-65vw;top:20%}
+#ency-fusion-claude-app .hero::after{display:none}
+#ency-fusion-claude-app .workflow::before{opacity:.23;width:45vw}
+#ency-fusion-claude-app .ency-mark{min-height:36px; padding:7px 9px}
+#ency-fusion-claude-app .ency-mark img{height:20px;max-width:94px}
+#ency-fusion-claude-app .ency-inline img{height:22px;max-width:105px}}
+/* v04: 통합 작업 흐름 / 연결감 있는 둥근 3중 화살표 */
+#ency-fusion-claude-app .workflow-item{margin-top:0}
+#ency-fusion-claude-app .workflow-divider + .workflow-item{margin-top:110px}
+#ency-fusion-claude-app .flow-link{position:relative;width:108px;height:164px;margin:19px auto 10px;display:flex;align-items:center;justify-content:center;pointer-events:none}
+#ency-fusion-claude-app .flow-link svg{display:block;width:108px;height:164px;overflow:visible}
+#ency-fusion-claude-app .flow-chevron{fill:none;stroke:#697a7c;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;opacity:.22}
+#ency-fusion-claude-app .flow-chevron.ch-two{stroke:#178d9a;opacity:.5}
+#ency-fusion-claude-app .flow-chevron.ch-three{stroke:#1674a8;opacity:.83}
+@media(prefers-reduced-motion:no-preference){#ency-fusion-claude-app .flow-link.is-visible .flow-chevron{animation:flow-whoosh 1.55s cubic-bezier(.22,.75,.3,1) both}
+#ency-fusion-claude-app .flow-link.is-visible .ch-one{animation-delay:0s}
+#ency-fusion-claude-app .flow-link.is-visible .ch-two{animation-delay:.13s}
+#ency-fusion-claude-app .flow-link.is-visible .ch-three{animation-delay:.26s}
+@keyframes flow-whoosh{0%{opacity:0;transform:translateY(-25px) scale(.89)}55%{opacity:.92;transform:translateY(5px) scale(1.04)}100%{transform:translateY(0) scale(1)}}}
+#ency-fusion-claude-app .ency-wordmark{color:#edf4f6;white-space:nowrap}
+#ency-fusion-claude-app .ency-inline img{height:30px;max-width:55px;object-fit:contain}
+#ency-fusion-claude-app .ency-inline b{white-space:nowrap;color:#142021}
+@media(max-width:900px){#ency-fusion-claude-app .workflow-divider + .workflow-item{margin-top:70px}
+#ency-fusion-claude-app .flow-link{height:132px;margin:16px auto 7px}
+#ency-fusion-claude-app .flow-link svg{height:132px}}
+@media(max-width:580px){#ency-fusion-claude-app .workflow-divider + .workflow-item{margin-top:60px}
+#ency-fusion-claude-app .flow-link{width:86px;height:122px;margin:9px auto 2px}
+#ency-fusion-claude-app .flow-link svg{width:86px;height:122px}
+#ency-fusion-claude-app .ency-inline img{height:23px;max-width:42px}}
+/* v05: 피드백 반영 — 위계 축소, 중앙 정렬, 밝은 히어로, 부드러운 워크플로우 */
+#ency-fusion-claude-app .hero{
+  background:linear-gradient(155deg,#242a2c 0%,#343c3e 46%,#646d6e 100%);
+  min-height:auto;
+}
+#ency-fusion-claude-app .hero::before{border-color:rgba(242,247,245,.07)}
+#ency-fusion-claude-app .hero::after{border-color:rgba(242,247,245,.045)}
+#ency-fusion-claude-app .hero .wrap{position:relative;z-index:1}
+#ency-fusion-claude-app .hero-copy{margin-inline:auto;max-width:1150px;padding-top:112px;text-align:center}
+#ency-fusion-claude-app .hero h1{font-size:clamp(42px,5.1vw,78px);line-height:1.12;letter-spacing:-.06em}
+#ency-fusion-claude-app .hero .lead{max-width:none;margin:30px auto 0;font-size:clamp(14px,1.2vw,17px);line-height:1.65;color:#e5e9e8}
+#ency-fusion-claude-app .brand-line{justify-content:center;margin-top:30px}
+#ency-fusion-claude-app .brand-unit img[src*="simple-icons"], #ency-fusion-claude-app .brand-unit .ency-hero-icon{filter:brightness(0) invert(1)}
+#ency-fusion-claude-app .brand-unit img.ency-hero-icon{max-width:42px;height:26px;object-fit:contain}
+#ency-fusion-claude-app .hero-actions{justify-content:center;margin-top:34px}
+#ency-fusion-claude-app .hero-stage{margin-top:73px}
+#ency-fusion-claude-app .section-heading{font-size:clamp(32px,3.55vw,51px);line-height:1.2}
+#ency-fusion-claude-app .wf-copy h3{font-size:clamp(27px,2.55vw,39px)}
+#ency-fusion-claude-app .guide-copy .section-heading{font-size:clamp(31px,3.45vw,49px)}
+#ency-fusion-claude-app .consult .section-heading{font-size:clamp(36px,4.75vw,65px)}
+#ency-fusion-claude-app .workflow .section-intro{max-width:none;font-size:15px;letter-spacing:-.028em;white-space:nowrap}
+#ency-fusion-claude-app .benefit .section-heading, #ency-fusion-claude-app .benefit .section-intro{text-align:center;margin-left:auto;margin-right:auto}
+#ency-fusion-claude-app .benefit .section-heading{max-width:1050px}
+#ency-fusion-claude-app .benefit .section-intro{max-width:900px}
+#ency-fusion-claude-app .flow-link{width:54px;height:82px;margin:9px auto 6px}
+#ency-fusion-claude-app .flow-link svg{width:54px;height:82px}
+#ency-fusion-claude-app .flow-chevron{stroke:#bcc2c3;stroke-width:18;opacity:.65}
+#ency-fusion-claude-app .flow-chevron.ch-two{stroke:#b9bec0;opacity:.65}
+#ency-fusion-claude-app .flow-chevron.ch-three{stroke:#b6bcbd;opacity:.65}
+@media(prefers-reduced-motion:no-preference){#ency-fusion-claude-app .flow-link.is-visible .flow-chevron{animation:flow-soft-in .8s ease-out both}
+#ency-fusion-claude-app .flow-link.is-visible .ch-one{animation-delay:0s}
+#ency-fusion-claude-app .flow-link.is-visible .ch-two{animation-delay:.1s}
+#ency-fusion-claude-app .flow-link.is-visible .ch-three{animation-delay:.2s}
+@keyframes flow-soft-in {from{opacity:0}to{opacity:.65}}}
+@media(max-width:1100px){#ency-fusion-claude-app .workflow .section-intro{white-space:normal}}
+@media(max-width:900px){#ency-fusion-claude-app .hero-copy{padding-top:90px}
+#ency-fusion-claude-app .hero h1{font-size:clamp(39px,6.6vw,60px)}
+#ency-fusion-claude-app .flow-link, #ency-fusion-claude-app .flow-link svg{width:54px;height:82px}
+#ency-fusion-claude-app .flow-link{margin:9px auto 6px}}
+@media(max-width:580px){#ency-fusion-claude-app .hero-copy{padding-top:68px}
+#ency-fusion-claude-app .hero h1{font-size:clamp(32px,8.3vw,43px)}
+#ency-fusion-claude-app .hero .lead{font-size:15px;line-height:1.7;max-width:34ch}
+#ency-fusion-claude-app .hero-actions{align-items:stretch}
+#ency-fusion-claude-app .section-heading{font-size:clamp(29px,7.5vw,38px)}
+#ency-fusion-claude-app .wf-copy h3{font-size:clamp(27px,7vw,32px)}
+#ency-fusion-claude-app .guide-copy .section-heading{font-size:clamp(28px,7.8vw,37px)}
+#ency-fusion-claude-app .consult .section-heading{font-size:clamp(32px,8.5vw,42px)}
+#ency-fusion-claude-app .brand-line{gap:8px}
+#ency-fusion-claude-app .brand-unit img.ency-hero-icon{height:18px;max-width:27px}
+#ency-fusion-claude-app .flow-link, #ency-fusion-claude-app .flow-link svg{width:50px;height:76px}
+#ency-fusion-claude-app .flow-link{margin:8px auto 4px}}
+/* v06 — requested final typography, connector spacing, and guide marks */
+#ency-fusion-claude-app .workflow .section-heading strong, #ency-fusion-claude-app .benefit .section-heading strong{font-weight:750}
+#ency-fusion-claude-app .workflow .section-heading .thin-heading, #ency-fusion-claude-app .benefit .section-heading .thin-heading{font-weight:350}
+#ency-fusion-claude-app .flow-link{margin-top:44px;margin-bottom:42px}
+#ency-fusion-claude-app .guide-brand-line{display:flex;align-items:center;flex-wrap:wrap;gap:11px;margin:22px 0 8px;color:#1e2628}
+#ency-fusion-claude-app .guide-brand{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:13px;white-space:nowrap}
+#ency-fusion-claude-app .guide-brand img{height:17px;width:17px;object-fit:contain}
+#ency-fusion-claude-app .guide-brand img[src*="Ency"]{height:20px;width:26px}
+#ency-fusion-claude-app .guide-cross{color:#818a8b;font-size:13px}
+#ency-fusion-claude-app .guide-cover-logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px}
+#ency-fusion-claude-app .guide-cover-logo img{height:22px;width:28px;object-fit:contain;filter:brightness(0) invert(1)}
+#ency-fusion-claude-app .consult .wrap{text-align:center;display:flex;flex-direction:column;align-items:center}
+#ency-fusion-claude-app .consult .section-heading{font-size:clamp(30px,3.9vw,53px);max-width:850px;margin-inline:auto}
+#ency-fusion-claude-app .consult p{font-size:clamp(13px,1.04vw,16px);max-width:none;width:100%;margin:25px auto 34px;white-space:nowrap;line-height:1.65}
+#ency-fusion-claude-app .consult .fineprint{text-align:center}
+#ency-fusion-claude-app .benefit .section-intro{max-width:1100px;font-size:clamp(14px,1.16vw,17px);line-height:1.65}
+@media(max-width:1100px){#ency-fusion-claude-app .consult p{white-space:normal}}
+@media(max-width:900px){#ency-fusion-claude-app .flow-link{margin-top:32px;margin-bottom:32px}}
+@media(max-width:580px){#ency-fusion-claude-app .flow-link{margin-top:24px;margin-bottom:26px}
+#ency-fusion-claude-app .consult .section-heading{font-size:clamp(29px,7.6vw,38px)}
+#ency-fusion-claude-app .consult p{font-size:14px;max-width:34ch}
+#ency-fusion-claude-app .guide-brand-line{gap:7px}
+#ency-fusion-claude-app .guide-brand{font-size:12px}
+#ency-fusion-claude-app .guide-brand img{width:15px;height:15px}
+#ency-fusion-claude-app .guide-brand img[src*="Ency"]{width:22px;height:17px}}
+/* v07: 히어로 및 워크플로우 화살표 이외의 등장 모션 제거 */
+#ency-fusion-claude-app .workflow .reveal, #ency-fusion-claude-app .demo .reveal, #ency-fusion-claude-app .benefit .reveal, #ency-fusion-claude-app .guide .reveal, #ency-fusion-claude-app .consult .reveal{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
+/* 실제 이미지 영역의 섬세한 호버 확대: 캡처와 원본 화면을 유지 */
+#ency-fusion-claude-app .stage-screen img, #ency-fusion-claude-app .wf-visual img, #ency-fusion-claude-app .large-visual img{transform:scale(1);transition:transform .55s cubic-bezier(.2,.7,.2,1);transform-origin:center center}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){#ency-fusion-claude-app .stage-screen:hover img, #ency-fusion-claude-app .wf-visual:hover img, #ency-fusion-claude-app .large-visual:hover img{transform:scale(1.045)}}
+@media(prefers-reduced-motion:reduce){#ency-fusion-claude-app .stage-screen img, #ency-fusion-claude-app .wf-visual img, #ency-fusion-claude-app .large-visual img{transition:none!important;transform:none!important}
+#ency-fusion-claude-app .flow-link .flow-chevron{animation:none!important}}
+/* 버튼은 명확한 상태 변화만 남기고 이동 애니메이션 제거 */
+#ency-fusion-claude-app .btn{transition:none}
+#ency-fusion-claude-app .btn:hover{transform:none}
+/* Isolation fixes: retain standalone page layout within Sixshop without changing the site. */
+#ency-fusion-claude-app {display:block; position:relative; width:100%; max-width:100%; overflow:hidden; min-height:0; font:400 17px/1.6 var(--font);}
+#ency-fusion-claude-app #ency-campaign {width:100%; margin:0; padding:0;}
+#ency-fusion-claude-app a {color:inherit;}
+#ency-fusion-claude-app .hero .btn-primary,
+#ency-fusion-claude-app .guide .btn-primary {color:#fff;}
+@media (max-width:580px){#ency-fusion-claude-app {font-size:16px;}}
+/* Hide ONLY the identified blank Sixshop page. Header and footer remain untouched. */
+body.ency-fusion-claude-route-active #page2767228 {display:none!important;}

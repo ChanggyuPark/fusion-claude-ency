@@ -1,4 +1,4 @@
-/* Fusion × Claude × ENCY CAM Sixshop integration · v11
+/* Fusion × Claude × ENCY CAM Sixshop integration · v12
  * Target: pathname === '/fusion-claude-ency' AND #page2767228 exists.
  * Source of markup/style: ENCY_AI_랜딩_v07.html (unchanged content/copy).
  * Edit CONTENT settings only once real assets/form link are ready.
@@ -16,9 +16,10 @@
   if (window.__encyFusionClaudeRuntime) return;
   window.__encyFusionClaudeRuntime = true;
 
-  // No link guesses. Add known final URLs when available.
+  // Confirmed WorkForms destinations: separate guide and consultation forms.
   const CONTENT = {
-    formUrl: '',              // Existing ENCY Monday WorkForms URL
+    guideFormUrl: 'https://wkf.ms/4eG6Ozw',
+    consultFormUrl: 'https://wkf.ms/3TRljbJ'
     guideParam: '',           // Optional form prefill query, if supported
     consultParam: '',         // Optional form prefill query, if supported
     youtubeAI: '',           // YouTube 11-character video ID
@@ -109,9 +110,10 @@
     }
   }
   function formLink(kind) {
-    if (!CONTENT.formUrl) return null;
+    const baseUrl = kind === 'guide' ? CONTENT.guideFormUrl : CONTENT.consultFormUrl;
+    if (!baseUrl) return null;
     let u;
-    try {u = new URL(CONTENT.formUrl, location.href);} catch (_) {return null;}
+    try {u = new URL(baseUrl, location.href);} catch (_) {return null;}
     if (!/^https?:$/.test(u.protocol)) return null;
     const prefill = kind === 'guide' ? CONTENT.guideParam : CONTENT.consultParam;
     if (prefill) {

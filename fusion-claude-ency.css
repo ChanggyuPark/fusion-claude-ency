@@ -333,12 +333,12 @@
 @media (max-width:580px){#ency-fusion-claude-app {font-size:16px;}}
 /* Hide ONLY the identified blank Sixshop page. Header and footer remain untouched. */
 body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
-/* v09: small supporting screenshots, preserving original screen content. */
+/* v10: minimal supporting screenshots, preserving original screen content. */
 #ency-fusion-claude-app .wf-visual .inset-card{
   position:absolute;z-index:3;right:16px;bottom:16px;
   width:32%;aspect-ratio:16/9;overflow:hidden;
-  border:3px solid rgba(255,255,255,.95);border-radius:10px;
-  background:#20272b;box-shadow:0 12px 28px rgba(0,0,0,.4);
+  border:1px solid #d8dcde;border-radius:6px;
+  background:#20272b;box-shadow:none;
   pointer-events:none;
 }
 #ency-fusion-claude-app .wf-visual .inset-card img{
@@ -349,7 +349,7 @@ body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
 #ency-fusion-claude-app .wf-visual[data-img="model"] .inset-card{right:16px;bottom:16px;}
 @media(max-width:580px){
   #ency-fusion-claude-app .wf-visual .inset-card{
-    width:36%;right:10px;bottom:10px;border-width:2px;border-radius:7px;
+    width:36%;right:10px;bottom:10px;border-width:1px;border-radius:5px;
   }
   #ency-fusion-claude-app .wf-visual[data-img="toolpath"] .inset-card{top:10px;}
 }

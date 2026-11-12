@@ -1,4 +1,4 @@
-/* Fusion × Claude × ENCY CAM Sixshop integration · v11
+/* Fusion × Claude × ENCY CAM Sixshop integration · v12
  * Target: pathname === '/fusion-claude-ency' AND #page2767228 exists.
  * Source of markup/style: ENCY_AI_랜딩_v07.html (unchanged content/copy).
  * Edit CONTENT settings only once real assets/form link are ready.
@@ -220,6 +220,17 @@
     D.body?.classList.remove(CONFIG.routeClass);
     mountedPage=null;
   }
+  // Safety cleanup for any legacy K-DEX event section in the landing root.
+  // Keep unrelated disclaimers and other Sixshop pages unchanged.
+  function removeLegacyKdex(root) {
+    if (!root) return;
+    root.querySelectorAll('section').forEach(section => {
+      const content = section.textContent || '';
+      if (content.includes('K-DEX 2026') && content.includes('전시회 공식 안내')) {
+        section.remove();
+      }
+    });
+  }
   function mount(page) {
     cleanup();
     const parent=page.parentElement;
@@ -227,6 +238,7 @@
     const root=D.createElement('div');
     root.id=CONFIG.rootId;
     root.innerHTML=MARKUP;
+    removeLegacyKdex(root);
     page.insertAdjacentElement('afterend',root);
     mountedPage=page;
     collectUTM();
@@ -252,6 +264,7 @@
     } else if (lastUTM !== query) {
       collectUTM();setFormLinks(root);
     }
+    removeLegacyKdex(D.getElementById(CONFIG.rootId));
     lastPath=path;lastUTM=query;
   }
   function boot() {

@@ -333,7 +333,7 @@
 @media (max-width:580px){#ency-fusion-claude-app {font-size:16px;}}
 /* Hide ONLY the identified blank Sixshop page. Header and footer remain untouched. */
 body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
-/* v10: minimal supporting screenshots, preserving original screen content. */
+/* v11: minimal supporting screenshots, preserving original screen content. */
 #ency-fusion-claude-app .wf-visual .inset-card{
   position:absolute;z-index:3;right:16px;bottom:16px;
   width:32%;aspect-ratio:16/9;overflow:hidden;
@@ -352,4 +352,35 @@ body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
     width:36%;right:10px;bottom:10px;border-width:1px;border-radius:5px;
   }
   #ency-fusion-claude-app .wf-visual[data-img="toolpath"] .inset-card{top:10px;}
+}
+
+/* v11: source captures are all 16:9; avoid unintended cropping */
+#ency-fusion-claude-app .stage-screen {
+  aspect-ratio:16/9;
+}
+#ency-fusion-claude-app .stage-screen .screen-image {
+  object-fit:contain;
+}
+#ency-fusion-claude-app .wf-visual {
+  aspect-ratio:16/9;
+  min-height:0;
+}
+#ency-fusion-claude-app .wf-visual > img {
+  object-fit:contain;
+}
+#ency-fusion-claude-app .benefit-spotlight .large-visual {
+  aspect-ratio:16/9;
+}
+#ency-fusion-claude-app .large-visual > img {
+  object-fit:contain;
+}
+#ency-fusion-claude-app .wf-visual .inset-card img {
+  object-fit:contain;
+}
+@media(max-width:900px) {
+  #ency-fusion-claude-app .wf-visual { min-height:0; }
+  #ency-fusion-claude-app .benefit-spotlight .large-visual { aspect-ratio:16/9; }
+}
+@media(max-width:580px) {
+  #ency-fusion-claude-app .stage-screen { aspect-ratio:16/9; }
 }

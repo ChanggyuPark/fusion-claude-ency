@@ -19,7 +19,7 @@
   // Confirmed WorkForms destinations: separate guide and consultation forms.
   const CONTENT = {
     guideFormUrl: 'https://wkf.ms/4eG6Ozw',
-    consultFormUrl: 'https://wkf.ms/3TRljbJ'
+    consultFormUrl: 'https://wkf.ms/3TRljbJ',
     guideParam: '',           // Optional form prefill query, if supported
     consultParam: '',         // Optional form prefill query, if supported
     youtubeAI: '',           // YouTube 11-character video ID

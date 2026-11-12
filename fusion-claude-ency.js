@@ -1,4 +1,4 @@
-/* Fusion × Claude × ENCY CAM Sixshop integration · v08
+/* Fusion × Claude × ENCY CAM Sixshop integration · v09
  * Target: pathname === '/fusion-claude-ency' AND #page2767228 exists.
  * Source of markup/style: ENCY_AI_랜딩_v07.html (unchanged content/copy).
  * Edit CONTENT settings only once real assets/form link are ready.
@@ -23,7 +23,8 @@
     consultParam: '',         // Optional form prefill query, if supported
     youtubeAI: '',           // YouTube 11-character video ID
     youtubeCAM: '',          // YouTube 11-character video ID
-    images: {hero:'', drawing:'', model:'', toolpath:'', simulation:'', detail:''}
+    images: {hero:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_1.jpg', drawing:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_9.jpg', model:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_3.jpg', toolpath:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_4.jpg', simulation:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_5.jpg', detail:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_6.jpg'},
+    insetImages: {model:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_2.jpg', toolpath:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_7.jpg'}
   };
 
   const MARKUP = `<main id="ency-campaign">
@@ -163,6 +164,24 @@
       });
     });
   }
+  // Optional image-only overlays. Base screenshot/UI remains untouched.
+  function applyInsetImages(root) {
+    const captions = {model:'Fusion 3D 모델',toolpath:'추가 가공 사례'};
+    Object.entries(CONTENT.insetImages || {}).forEach(([name, src]) => {
+      const parent = root.querySelector('[data-img="'+name+'"]');
+      if (!parent || !src || parent.querySelector('.inset-card')) return;
+      const inset = D.createElement('div');
+      inset.className = 'inset-card';
+      inset.setAttribute('aria-label', captions[name] || '보조 이미지');
+      const img = D.createElement('img');
+      img.src = src;
+      img.alt = captions[name] || '보조 화면';
+      img.loading = 'lazy';
+      img.addEventListener('error', () => inset.remove(), {once:true});
+      inset.appendChild(img);
+      parent.appendChild(inset);
+    });
+  }
   function applyVideos(root) {
     [['ai',CONTENT.youtubeAI],['cam',CONTENT.youtubeCAM]].forEach(([name,id]) => {
       if (!/^[\w-]{11}$/.test(id)) return;
@@ -213,6 +232,7 @@
     collectUTM();
     D.body.classList.add(CONFIG.routeClass);
     applyImages(root);
+    applyInsetImages(root);
     applyVideos(root);
     setFormLinks(root);
     initializeAnimations(root);

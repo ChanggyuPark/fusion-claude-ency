@@ -1,4 +1,4 @@
-/* Fusion × Claude × ENCY CAM Sixshop integration · v12
+/* Fusion × Claude × ENCY CAM Sixshop integration · v13
  * Target: pathname === '/fusion-claude-ency' AND #page2767228 exists.
  * Source of markup/style: ENCY_AI_랜딩_v07.html (unchanged content/copy).
  * Edit CONTENT settings only once real assets/form link are ready.
@@ -22,8 +22,8 @@
     consultFormUrl: 'https://wkf.ms/3TRljbJ',
     guideParam: '',           // Optional form prefill query, if supported
     consultParam: '',         // Optional form prefill query, if supported
-    youtubeAI: '',           // YouTube 11-character video ID
-    youtubeCAM: '',          // YouTube 11-character video ID
+    youtubeAI: 'm_TuT9jTEtc',           // YouTube 11-character video ID
+    youtubeCAM: 'CnNW92Y5MeU',          // YouTube 11-character video ID
     images: {hero:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_1.jpg?v=20261112-11', drawing:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_9.jpg?v=20261112-11', model:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_3.jpg?v=20261112-11', toolpath:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_4.jpg?v=20261112-11', simulation:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_5.jpg?v=20261112-11', detail:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_6.jpg?v=20261112-11'},
     insetImages: {model:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_2.jpg?v=20261112-11', toolpath:'https://ik.imagekit.io/smartware/26conference/marketing/fusion-claude-ency/Capture_7.jpg?v=20261112-11'}
   };

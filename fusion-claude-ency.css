@@ -401,7 +401,7 @@ body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
   max-width:none;
 }
 
-/* Application calls to action in the hero, guide and consultation sections. */
+/* Keep campaign CTA backgrounds and text colors independent of Sixshop's link styles. */
 #ency-fusion-claude-app a.btn.js-guide,
 #ency-fusion-claude-app a.btn.js-consult {
   display:inline-flex;
@@ -419,12 +419,12 @@ body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
   text-decoration:none;
 }
 #ency-fusion-claude-app a.btn.js-guide {
-  background:linear-gradient(108deg,#007a73,#08647e 52%,#285bc2);
-  color:#fff;
+  background:linear-gradient(108deg,#007a73,#08647e 52%,#285bc2) !important;
+  color:#fff !important;
 }
 #ency-fusion-claude-app a.btn.js-consult {
-  background:#fff;
-  color:#101214;
+  background:#fff !important;
+  color:#101214 !important;
 }
 #ency-fusion-claude-app a.btn.js-guide::after,
 #ency-fusion-claude-app a.btn.js-consult::after {
@@ -436,7 +436,7 @@ body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
   transform:rotate(45deg);
 }
 #ency-fusion-claude-app a.btn.js-consult:hover {
-  background:#eaf6f5;
+  background:#eaf6f5 !important;
 }
 #ency-fusion-claude-app a.btn.js-guide:focus-visible,
 #ency-fusion-claude-app a.btn.js-consult:focus-visible {

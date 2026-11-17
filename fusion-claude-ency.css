@@ -411,20 +411,17 @@ body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
   min-height:52px;
   max-width:100%;
   padding:12px 24px;
-  border:1px solid transparent;
+  border:0 !important;
   border-radius:6px;
   font-weight:700;
   line-height:1.35;
   text-align:center;
   text-decoration:none;
 }
-#ency-fusion-claude-app a.btn.js-guide {
-  background:linear-gradient(108deg,#007a73,#08647e 52%,#285bc2) !important;
-  color:#fff !important;
-}
+#ency-fusion-claude-app a.btn.js-guide,
 #ency-fusion-claude-app a.btn.js-consult {
-  background:#fff !important;
-  color:#101214 !important;
+  background:linear-gradient(108deg,#01d5ad,#3764de) !important;
+  color:#080910 !important;
 }
 #ency-fusion-claude-app a.btn.js-guide::after,
 #ency-fusion-claude-app a.btn.js-consult::after {
@@ -436,7 +433,7 @@ body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
   transform:rotate(45deg);
 }
 #ency-fusion-claude-app a.btn.js-consult:hover {
-  background:#eaf6f5 !important;
+  filter:brightness(1.12);
 }
 #ency-fusion-claude-app a.btn.js-guide:focus-visible,
 #ency-fusion-claude-app a.btn.js-consult:focus-visible {

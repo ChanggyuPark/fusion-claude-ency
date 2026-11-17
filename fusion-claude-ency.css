@@ -421,7 +421,7 @@ body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
 #ency-fusion-claude-app a.btn.js-guide,
 #ency-fusion-claude-app a.btn.js-consult {
   background:linear-gradient(108deg,#01d5ad,#3764de) !important;
-  color:#080910 !important;
+  color:#fff !important;
 }
 #ency-fusion-claude-app a.btn.js-guide::after,
 #ency-fusion-claude-app a.btn.js-consult::after {

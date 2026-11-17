@@ -400,3 +400,47 @@ body.ency-fusion-claude-route-active #page2767228 {display:none!important;}
   object-fit:contain;
   max-width:none;
 }
+
+/* Application calls to action in the hero, guide and consultation sections. */
+#ency-fusion-claude-app a.btn.js-guide,
+#ency-fusion-claude-app a.btn.js-consult {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:52px;
+  max-width:100%;
+  padding:12px 24px;
+  border:1px solid transparent;
+  border-radius:6px;
+  font-weight:700;
+  line-height:1.35;
+  text-align:center;
+  text-decoration:none;
+}
+#ency-fusion-claude-app a.btn.js-guide {
+  background:linear-gradient(108deg,#007a73,#08647e 52%,#285bc2);
+  color:#fff;
+}
+#ency-fusion-claude-app a.btn.js-consult {
+  background:#fff;
+  color:#101214;
+}
+#ency-fusion-claude-app a.btn.js-guide::after,
+#ency-fusion-claude-app a.btn.js-consult::after {
+  content:"";
+  flex:0 0 7px;
+  height:7px;
+  border-top:2px solid currentColor;
+  border-right:2px solid currentColor;
+  transform:rotate(45deg);
+}
+#ency-fusion-claude-app a.btn.js-consult:hover {
+  background:#eaf6f5;
+}
+#ency-fusion-claude-app a.btn.js-guide:focus-visible,
+#ency-fusion-claude-app a.btn.js-consult:focus-visible {
+  outline:2px solid #101214;
+  outline-offset:3px;
+  box-shadow:0 0 0 3px #fff;
+}
